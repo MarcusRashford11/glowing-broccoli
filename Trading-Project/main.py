@@ -5,3 +5,4 @@ df = load_yahoo_data("AAPL")
 df = calculate_returns(df)
 
 print(df[["Close", "returns"]].head(10))
+print("shinooy")
