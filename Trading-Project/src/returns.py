@@ -8,3 +8,4 @@ def calculate_returns(df, price_col="Close"):
     df = df.copy()
     df["returns"] = df[price_col].pct_change()
     return df
+print(1)
