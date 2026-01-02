@@ -1,0 +1,15 @@
+name: "Enhancement"
+description: Suggest an improvement to an existing feature
+title: "[Enhancement] <title>"
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: current_behavior
+    attributes:
+      label: Current Behavior
+  - type: textarea
+    id: proposed_change
+    attributes:
+      label: Proposed Change
+    validations:
+      required: true

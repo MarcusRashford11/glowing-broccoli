@@ -1,0 +1,16 @@
+name: "Discussion"
+description: Brainstorm or ask questions
+title: "[Discussion] <title>"
+labels: ["discussion"]
+body:
+  - type: textarea
+    id: topic
+    attributes:
+      label: Topic
+      description: What do you want to discuss?
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Background / Context
