@@ -1,8 +1,14 @@
 from src.load_data import load_yahoo_data
 from src.returns import calculate_returns
+import pandas as pd
 
-df = load_yahoo_data("AAPL")
-df = calculate_returns(df)
+ticker = input("Write a valid ticker: ").upper()
 
-print(df[["Close", "returns"]].head(10))
-print("shinooy")
+try:
+    df = load_yahoo_data(ticker)
+    returns = calculate_returns(df)
+    print(returns.head())
+except KeyError:
+    print(f"{ticker} is not a valid ticker")
+
+
