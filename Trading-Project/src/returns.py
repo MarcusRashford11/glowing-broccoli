@@ -1,4 +1,5 @@
 def calculate_returns(df, price_col="Close"):
+    n=20 
     """
     Add a returns column based on percentage change.
     """
@@ -11,4 +12,9 @@ def calculate_returns(df, price_col="Close"):
     df["return_lag_1"]=df["returns"].shift(1)
 
     df["return_lag_7"]=df["returns"].shift(7)
+
+    #if df["returns"].shift(n)>df["returns"].shift(n+1):
+    #    df["positive"]= "+"
+    #else:
+    #    df["positive"]= "-"
     return df
